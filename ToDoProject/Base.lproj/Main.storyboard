@@ -176,8 +176,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="New ToDo" id="idI-i8-tj3">
-                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qmc-UY-hhu"/>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="QD4-DN-Dvz"/>
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qmc-UY-hhu">
+                            <connections>
+                                <segue destination="oF2-4a-52g" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="a89-J0-fky"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="QD4-DN-Dvz">
+                            <connections>
+                                <segue destination="oF2-4a-52g" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="bID-Ov-zZZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="dueDateLabel" destination="hoD-Yk-IGY" id="Mmr-R8-yPy"/>
@@ -189,6 +197,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hl-DA-NsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="oF2-4a-52g" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2307.2463768115945" y="-37.5"/>
         </scene>
