@@ -24,7 +24,7 @@ struct ToDo: Codable {
     
     static let DocumentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
-    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathComponent("plist")
+    static let ArchiveURL = DocumentsDirectory.appendingPathComponent("todos").appendingPathExtension("plist")
     
     static func loadToDos() -> [ToDo]? {
         guard let codedToDos = try? Data(contentsOf: ArchiveURL) else { return nil }
@@ -32,18 +32,17 @@ struct ToDo: Codable {
         return try? propertyListDecoder.decode(Array<ToDo>.self, from: codedToDos)
     }
     
-    static func saveToDos(_ todos: [ToDo]) {
-        let propertListEncoder = PropertyListEncoder()
-        let codedToDos = try? propertListEncoder.encode(todos)
-        try? codedToDos?.write(to: ArchiveURL, options: .noFileProtection)
-    }
-    
-    
     static func loadSampleToDos() -> [ToDo] {
         let todo1 = ToDo(title: "ToDo One", isComplete: false, dueDate: Date(), notes: "Notes1")
         let todo2 = ToDo(title: "ToDo Two", isComplete: false, dueDate: Date(), notes: "Notes2")
         let todo3 = ToDo(title: "ToDo Three", isComplete: false, dueDate: Date(), notes: "Notes3")
         
         return [todo1, todo2, todo3]
+    }
+    
+    static func saveToDos(_ todos: [ToDo]) {
+        let propertyListEncoder = PropertyListEncoder()
+        let codedToDos = try? propertyListEncoder.encode(todos)
+        try? codedToDos?.write(to: ArchiveURL, options: .noFileProtection)
     }
 }
