@@ -21,11 +21,48 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="yQT-0F-0fy" customClass="ToDoCell" customModule="ToDoProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yQT-0F-0fy" id="8v3-qJ-Fp4">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yQT-0F-0fy" id="8v3-qJ-Fp4">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-re-pjG">
+                                            <rect key="frame" x="20" y="3" width="36" height="36"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="36" id="8ng-Lz-z9s"/>
+                                                <constraint firstAttribute="height" constant="36" id="gMi-PM-wfN"/>
+                                            </constraints>
+                                            <state key="normal" image="Unchecked"/>
+                                            <state key="selected" image="Checked"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped" destination="yQT-0F-0fy" eventType="touchUpInside" id="yHv-lH-XkJ"/>
+                                                <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="oVY-je-VQa"/>
+                                            </connections>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPa-eW-MQ5">
+                                            <rect key="frame" x="64" y="11" width="338" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="338" id="4VG-QH-iaB"/>
+                                                <constraint firstAttribute="height" constant="21" id="ROl-md-UGq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="Lgm-sl-ijf"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="top" secondItem="8v3-qJ-Fp4" secondAttribute="top" constant="11" id="NaM-kQ-Tzr"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="leading" secondItem="Zhi-re-pjG" secondAttribute="trailing" constant="8" id="Red-jP-prf"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="XQq-0D-kM8"/>
+                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="top" secondItem="8v3-qJ-Fp4" secondAttribute="top" constant="3" id="e1k-lF-oyU"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="fYh-l8-8bN"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="trailing" secondItem="8v3-qJ-Fp4" secondAttribute="trailingMargin" constant="8" id="iCa-UL-5UV"/>
+                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="leading" secondItem="8v3-qJ-Fp4" secondAttribute="leading" constant="20" id="jug-rH-tqi"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="isCompleteButton" destination="Zhi-re-pjG" id="TNy-Ki-5A4"/>
+                                    <outlet property="titleLabel" destination="BPa-eW-MQ5" id="0mC-NJ-7qb"/>
                                     <segue destination="sbo-xQ-2Hj" kind="show" identifier="showDetails" id="r5v-pW-CKp"/>
                                 </connections>
                             </tableViewCell>
@@ -45,7 +82,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HI7-WU-lqy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="489" y="-40"/>
+            <point key="canvasLocation" x="488.40579710144931" y="-40.178571428571423"/>
         </scene>
         <!--New ToDo-->
         <scene sceneID="wKK-o2-TSd">
