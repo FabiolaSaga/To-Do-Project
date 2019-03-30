@@ -14,6 +14,7 @@
 		F31E4273224FC9C9003496A1 /* ToDo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31E4272224FC9C9003496A1 /* ToDo.swift */; };
 		F31E4275224FCA09003496A1 /* ToDoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31E4274224FCA09003496A1 /* ToDoTableViewController.swift */; };
 		F31E4277224FD43D003496A1 /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31E4276224FD43D003496A1 /* ToDoViewController.swift */; };
+		F31E4279224FE273003496A1 /* ToDoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F31E4278224FE273003496A1 /* ToDoCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		F31E4272224FC9C9003496A1 /* ToDo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDo.swift; sourceTree = "<group>"; };
 		F31E4274224FCA09003496A1 /* ToDoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoTableViewController.swift; sourceTree = "<group>"; };
 		F31E4276224FD43D003496A1 /* ToDoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		F31E4278224FE273003496A1 /* ToDoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				F31E4272224FC9C9003496A1 /* ToDo.swift */,
 				F31E4276224FD43D003496A1 /* ToDoViewController.swift */,
 				F31E4274224FCA09003496A1 /* ToDoTableViewController.swift */,
+				F31E4278224FE273003496A1 /* ToDoCell.swift */,
 				F31E4267224FC915003496A1 /* Assets.xcassets */,
 				F31E4269224FC915003496A1 /* LaunchScreen.storyboard */,
 				F31E426C224FC915003496A1 /* Info.plist */,
@@ -145,6 +148,7 @@
 				F31E4261224FC915003496A1 /* AppDelegate.swift in Sources */,
 				F31E4275224FCA09003496A1 /* ToDoTableViewController.swift in Sources */,
 				F31E4273224FC9C9003496A1 /* ToDo.swift in Sources */,
+				F31E4279224FE273003496A1 /* ToDoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
