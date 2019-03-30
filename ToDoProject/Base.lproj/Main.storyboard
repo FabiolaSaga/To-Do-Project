@@ -125,6 +125,9 @@
                                                     <date key="date" timeIntervalSinceReferenceDate="575656720.95141304">
                                                         <!--2019-03-30 16:38:40 +0000-->
                                                     </date>
+                                                    <connections>
+                                                        <action selector="datePickerChanged:" destination="sbo-xQ-2Hj" eventType="primaryActionTriggered" id="ZNH-uQ-aJN"/>
+                                                    </connections>
                                                 </datePicker>
                                             </subviews>
                                             <constraints>

@@ -20,7 +20,13 @@ class ToDoViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        dueDatePickerView.date = Date().addingTimeInterval(24*60*60)
+        updateDueDateLabel(date: dueDatePickerView.date)
         updateSaveButtonState()
+    }
+    
+    func updateDueDateLabel(date: Date) {
+        dueDateLabel.text = ToDo.dueDateFormatter.string(from: date)
     }
     
     func updateSaveButtonState() {
@@ -39,6 +45,11 @@ class ToDoViewController: UITableViewController {
     @IBAction func isCompleteButtonTapped(_ sender: UIButton) {
         isCompletebutton.isSelected = !isCompletebutton.isSelected
     }
+    
+    @IBAction func datePickerChanged(_ sender: UIDatePicker) {
+        updateDueDateLabel(date: dueDatePickerView.date)
+    }
+    
     
     
 }
