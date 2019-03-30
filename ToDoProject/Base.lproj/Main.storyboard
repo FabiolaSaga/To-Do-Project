@@ -25,6 +25,9 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="sbo-xQ-2Hj" kind="show" identifier="showDetails" id="r5v-pW-CKp"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -175,7 +178,7 @@
                             <outlet property="delegate" destination="sbo-xQ-2Hj" id="alA-c9-VH7"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="New ToDo" id="idI-i8-tj3">
+                    <navigationItem key="navigationItem" title="New ToDo" largeTitleDisplayMode="never" id="idI-i8-tj3">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qmc-UY-hhu">
                             <connections>
                                 <segue destination="oF2-4a-52g" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="a89-J0-fky"/>
@@ -215,7 +218,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OdT-gH-jwV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1396" y="-37"/>
+            <point key="canvasLocation" x="1377" y="490"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="fVq-I3-f6Q">
@@ -238,4 +241,7 @@
         <image name="Checked" width="44" height="44"/>
         <image name="Unchecked" width="44" height="44"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="r5v-pW-CKp"/>
+    </inferredMetricsTieBreakers>
 </document>
