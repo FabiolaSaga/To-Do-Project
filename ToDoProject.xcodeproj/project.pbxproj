@@ -42,7 +42,6 @@
 		F31E4254224FC915003496A1 = {
 			isa = PBXGroup;
 			children = (
-				F31E4276224FD43D003496A1 /* ToDoViewController.swift */,
 				F31E425F224FC915003496A1 /* ToDoProject */,
 				F31E425E224FC915003496A1 /* Products */,
 			);
@@ -62,6 +61,7 @@
 				F31E4260224FC915003496A1 /* AppDelegate.swift */,
 				F31E4264224FC915003496A1 /* Main.storyboard */,
 				F31E4272224FC9C9003496A1 /* ToDo.swift */,
+				F31E4276224FD43D003496A1 /* ToDoViewController.swift */,
 				F31E4274224FCA09003496A1 /* ToDoTableViewController.swift */,
 				F31E4267224FC915003496A1 /* Assets.xcassets */,
 				F31E4269224FC915003496A1 /* LaunchScreen.storyboard */,

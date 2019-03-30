@@ -70,12 +70,19 @@
                                                     </constraints>
                                                     <state key="normal" title="Button" image="Unchecked"/>
                                                     <state key="selected" image="Checked"/>
+                                                    <connections>
+                                                        <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="HwE-Ii-hpN"/>
+                                                    </connections>
                                                 </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-vh-mfB">
                                                     <rect key="frame" x="64" y="7" width="330" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <action selector="returnPressed:" destination="sbo-xQ-2Hj" eventType="primaryActionTriggered" id="kr6-I4-uWe"/>
+                                                        <action selector="textEditingchanged:" destination="sbo-xQ-2Hj" eventType="editingDidEnd" id="j5t-Vn-EWx"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -169,6 +176,14 @@
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qmc-UY-hhu"/>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QD4-DN-Dvz"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="dueDateLabel" destination="hoD-Yk-IGY" id="Mmr-R8-yPy"/>
+                        <outlet property="dueDatePickerView" destination="pP0-xj-jEB" id="PrD-Pd-UYQ"/>
+                        <outlet property="isCompletebutton" destination="sM9-Kl-lXe" id="lew-jA-u8N"/>
+                        <outlet property="notesTextView" destination="vUq-4j-jn8" id="cHw-az-PhT"/>
+                        <outlet property="saveButton" destination="QD4-DN-Dvz" id="Jxu-Oc-SpG"/>
+                        <outlet property="titleTextField" destination="ahc-vh-mfB" id="kUe-7m-ALM"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hl-DA-NsH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
