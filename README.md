@@ -1,7 +1,7 @@
 # To-Do App 
 Add new tasks with a due date
 
-##Add new tasks to your to do list:
+## Add new tasks to your to do list:
 <p float="left">
   <img src="https://github.com/FabiolaSaga/ToDoProject/blob/master/Add_New_Task.gif" width="300" />
   </p>
