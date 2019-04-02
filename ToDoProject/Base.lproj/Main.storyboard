@@ -21,23 +21,10 @@
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ToDoCellIdentifier" id="yQT-0F-0fy" customClass="ToDoCell" customModule="ToDoProject" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yQT-0F-0fy" id="8v3-qJ-Fp4">
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yQT-0F-0fy" id="8v3-qJ-Fp4">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-re-pjG">
-                                            <rect key="frame" x="20" y="3" width="36" height="36"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="36" id="8ng-Lz-z9s"/>
-                                                <constraint firstAttribute="height" constant="36" id="gMi-PM-wfN"/>
-                                            </constraints>
-                                            <state key="normal" image="Unchecked"/>
-                                            <state key="selected" image="Checked"/>
-                                            <connections>
-                                                <action selector="completeButtonTapped" destination="yQT-0F-0fy" eventType="touchUpInside" id="yHv-lH-XkJ"/>
-                                                <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="oVY-je-VQa"/>
-                                            </connections>
-                                        </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPa-eW-MQ5">
                                             <rect key="frame" x="64" y="11" width="338" height="21"/>
                                             <constraints>
@@ -48,16 +35,30 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zhi-re-pjG">
+                                            <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="8La-Ec-OKu"/>
+                                                <constraint firstAttribute="width" constant="30" id="EyA-3v-r2G"/>
+                                                <constraint firstAttribute="height" constant="30" id="Uxr-Vc-TIc"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="uzH-Ql-nOQ"/>
+                                            </constraints>
+                                            <state key="normal" image="Unchecked"/>
+                                            <state key="selected" image="Checked"/>
+                                            <connections>
+                                                <action selector="completeButtonTapped" destination="yQT-0F-0fy" eventType="touchUpInside" id="yHv-lH-XkJ"/>
+                                                <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="oVY-je-VQa"/>
+                                            </connections>
+                                        </button>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="Lgm-sl-ijf"/>
+                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="leading" secondItem="Zhi-re-pjG" secondAttribute="trailing" constant="14" id="DKI-b0-m01"/>
                                         <constraint firstItem="BPa-eW-MQ5" firstAttribute="top" secondItem="8v3-qJ-Fp4" secondAttribute="top" constant="11" id="NaM-kQ-Tzr"/>
-                                        <constraint firstItem="BPa-eW-MQ5" firstAttribute="leading" secondItem="Zhi-re-pjG" secondAttribute="trailing" constant="8" id="Red-jP-prf"/>
                                         <constraint firstItem="BPa-eW-MQ5" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="XQq-0D-kM8"/>
-                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="top" secondItem="8v3-qJ-Fp4" secondAttribute="top" constant="3" id="e1k-lF-oyU"/>
+                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="top" secondItem="8v3-qJ-Fp4" secondAttribute="top" constant="6" id="cWZ-8V-XSN"/>
+                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="leading" secondItem="8v3-qJ-Fp4" secondAttribute="leading" constant="20" id="elr-cJ-h2x"/>
                                         <constraint firstItem="BPa-eW-MQ5" firstAttribute="centerY" secondItem="8v3-qJ-Fp4" secondAttribute="centerY" id="fYh-l8-8bN"/>
                                         <constraint firstItem="BPa-eW-MQ5" firstAttribute="trailing" secondItem="8v3-qJ-Fp4" secondAttribute="trailingMargin" constant="8" id="iCa-UL-5UV"/>
-                                        <constraint firstItem="Zhi-re-pjG" firstAttribute="leading" secondItem="8v3-qJ-Fp4" secondAttribute="leading" constant="20" id="jug-rH-tqi"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -74,6 +75,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="My ToDo's" largeTitleDisplayMode="always" id="DIq-kC-0gl">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="eLB-v1-SIf">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="Ctl-wV-ArX" kind="presentation" id="hvW-kP-x9D"/>
                             </connections>
@@ -102,20 +104,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM9-Kl-lXe">
-                                                    <rect key="frame" x="20" y="4" width="36" height="36"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="36" id="Pyp-bT-rFk"/>
-                                                        <constraint firstAttribute="height" constant="36" id="Uvt-1r-sZO"/>
-                                                    </constraints>
-                                                    <state key="normal" title="Button" image="Unchecked"/>
-                                                    <state key="selected" image="Checked"/>
-                                                    <connections>
-                                                        <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="HwE-Ii-hpN"/>
-                                                    </connections>
-                                                </button>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ahc-vh-mfB">
-                                                    <rect key="frame" x="64" y="7" width="330" height="30"/>
+                                                    <rect key="frame" x="58" y="7" width="336" height="30"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -124,13 +114,26 @@
                                                         <action selector="textEditingchanged:" destination="sbo-xQ-2Hj" eventType="editingDidEnd" id="j5t-Vn-EWx"/>
                                                     </connections>
                                                 </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sM9-Kl-lXe">
+                                                    <rect key="frame" x="20" y="6" width="30" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="30" id="PHi-gR-TKD"/>
+                                                        <constraint firstAttribute="width" constant="30" id="ah6-Bd-ba8"/>
+                                                    </constraints>
+                                                    <state key="normal" title="Button" image="Unchecked"/>
+                                                    <state key="selected" image="Checked"/>
+                                                    <connections>
+                                                        <action selector="isCompleteButtonTapped:" destination="sbo-xQ-2Hj" eventType="touchUpInside" id="HwE-Ii-hpN"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="sM9-Kl-lXe" firstAttribute="centerY" secondItem="qtF-d5-b9i" secondAttribute="centerY" id="FNC-5K-wBf"/>
+                                                <constraint firstItem="sM9-Kl-lXe" firstAttribute="leading" secondItem="qtF-d5-b9i" secondAttribute="leading" constant="20" id="C7o-mz-OkD"/>
+                                                <constraint firstAttribute="trailing" secondItem="ahc-vh-mfB" secondAttribute="trailing" constant="20" id="Kya-El-wZ8"/>
                                                 <constraint firstAttribute="trailing" secondItem="ahc-vh-mfB" secondAttribute="trailing" constant="20" id="UeW-qu-JFd"/>
-                                                <constraint firstItem="sM9-Kl-lXe" firstAttribute="leading" secondItem="qtF-d5-b9i" secondAttribute="leading" constant="20" id="Ybu-az-wjE"/>
+                                                <constraint firstItem="sM9-Kl-lXe" firstAttribute="top" secondItem="qtF-d5-b9i" secondAttribute="top" constant="6" id="aDp-1q-UeA"/>
                                                 <constraint firstItem="ahc-vh-mfB" firstAttribute="centerY" secondItem="qtF-d5-b9i" secondAttribute="centerY" id="bKg-yk-fyF"/>
-                                                <constraint firstItem="ahc-vh-mfB" firstAttribute="leading" secondItem="sM9-Kl-lXe" secondAttribute="trailing" constant="8" id="gcd-AS-Y6r"/>
+                                                <constraint firstItem="ahc-vh-mfB" firstAttribute="leading" secondItem="sM9-Kl-lXe" secondAttribute="trailing" constant="8" id="cfW-AD-Z5I"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -217,11 +220,13 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="New ToDo" largeTitleDisplayMode="never" id="idI-i8-tj3">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="Qmc-UY-hhu">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="oF2-4a-52g" kind="unwind" unwindAction="unwindToToDoListWithSegue:" id="a89-J0-fky"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="QD4-DN-Dvz">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="oF2-4a-52g" kind="unwind" identifier="saveUnwind" unwindAction="unwindToToDoListWithSegue:" id="bID-Ov-zZZ"/>
                             </connections>
@@ -248,6 +253,10 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="g3g-fc-Pzn">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1703906667" green="0.399066749" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="sbo-xQ-2Hj" kind="relationship" relationship="rootViewController" id="SUD-JA-T4D"/>
@@ -264,6 +273,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="Sfv-Dw-ggA">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.1703906667" green="0.399066749" blue="0.57488495110000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <connections>
                         <segue destination="syC-Rx-F9E" kind="relationship" relationship="rootViewController" id="reA-BP-HHn"/>
@@ -279,6 +295,6 @@
         <image name="Unchecked" width="44" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="r5v-pW-CKp"/>
+        <segue reference="SUD-JA-T4D"/>
     </inferredMetricsTieBreakers>
 </document>

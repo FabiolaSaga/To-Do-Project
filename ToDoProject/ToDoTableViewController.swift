@@ -22,6 +22,7 @@ class ToDoTableViewController: UITableViewController, ToDoCellDelegate {
         }
         
         navigationItem.leftBarButtonItem = editButtonItem
+        navigationItem.leftBarButtonItem?.tintColor = .white
         
     }
     
