@@ -6,12 +6,12 @@ Add new tasks with a due date
   <img src="https://github.com/FabiolaSaga/ToDoProject/blob/master/Add_New_Task.gif" width="300" />
   </p>
 
-##Edit existing tasks: 
+## Edit existing tasks: 
 <p float="left">
   <img src="https://github.com/FabiolaSaga/ToDoProject/blob/master/Edit_Task.gif" width="300" />
   </p>
 
-##Swipe to delete or hit Edit to delete tasks:
+## Swipe to delete or hit Edit to delete tasks:
 <p float="left">
   <img src="https://github.com/FabiolaSaga/ToDoProject/blob/master/Edit_Task.gif" width="300" />
   </p>
